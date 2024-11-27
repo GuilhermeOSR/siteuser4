@@ -1,38 +1,582 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
 .App {
+  max-width: 1920px;
+  margin: 0 auto;
+  background: #000000;
+}
+
+
+.App-header {
+  max-width: 1620px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #000;
+  font-size: calc(10px + 1vmin);
+  color: #c6c7c7;
+
+}
+
+.Navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+.App-link {
+  text-decoration: none;
+  color: #c3c6c8;
+  position: relative;
+}
+
+.App-link:hover {
+  color: #fff;
+}
+
+.App-link.active {
+  color: #fff;
+}
+
+.App-link:after {
+  content: '';
+  position: absolute;
+  bottom: -25px; 
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #509d93;
+  transform: scaleX(0);
+  transform-origin: left; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.App-link:hover:after,
+.App-link.active:after {
+  transform: scaleX(1);
+
+}
+
+
+.App-link.special {
+  padding: 10px 20px; 
+  border: 1px solid #509d93; 
+  color: #fff; 
+
+  display: inline-block; 
+  transition: all 0.3s ease-in-out;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.App-link.special.active {
+  background-color: transparent; 
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+.App-link.special:after {
+  content: none; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.BackgroundVideo {
+  position: absolute;
+  top: 20%;
+  left: 5%;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
+  z-index: 999; 
+  opacity: 0.2;
+  filter: blur(15px);
+
+  filter: brightness(1);
+}
+
+
+
+
+.ContentOverlay {
+  position: relative;
+  z-index: 1; 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100%;
+  color: #fff;
+}
+
+
+
+/* Container */
+.Container {
+  max-width: 1920px;
+  margin: 5% auto;
+  padding: 20px;
+  background-color: #000000;
+  color: #c6c7c7;
   font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  min-height: 80vh;
 }
 
-.App-link {
-  color: #61dafb;
+.Container .Left-side {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Melhorar call to action depois */
+
+
+.Container .Left-side h3 {
+  font-size: calc(10px + 1vmin);
+  margin-bottom: 20px;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+  
 }
+
+.Container .Left-side p {
+  color: #509d93;
+  margin-bottom: 40px;
+} 
+
+.Container .Left-side h2 .bolda {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+} 
+
+/*
+.Container .Left-side h2 .bolda::before {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  background-color: #80ffee;
+  color: blue;
+  display: inline-block;
+  opacity: 0.3;
+
+  
+} 
+*/
+
+
+
+.Container .Left-side h3:hover {
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+} 
+
+.Container .Left-side button {
+  width: 100%;
+  padding: 10px 20px;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #509d93;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+}
+
+.Container .Left-side button:hover {
+  transition: all 0.6s ease-in-out;
+  background-color: #509d93;
+  color: #fff;
+  width: 100%;
+  
+}
+
+.Container .Right-side {
+  max-width: 1620px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+  height: 60vh;
+  z-index: 2;
+}
+
+
+
+
+
+.Container .Right-side .box-projects {
+  width: 600px;
+  display: grid;
+  grid-template-columns: repeat(1, 2fr);
+  transition: all 0.63s ease-in-out;
+
+  
+  
+}
+
+
+
+.Container .Right-side .box-projects .img1 {
+  margin-left: -200px;
+  z-index: 99;
+  opacity: 0.4;
+  border: 1px solid #509d93;
+}
+
+.Container .Right-side .box-projects .img2 {
+margin-right: -180px;
+z-index: 100;
+margin-top: -200px;
+opacity: 1;
+border: 1px solid #509d93;
+}
+
+.Container .Right-side .box-projects .img3 {
+z-index: 98;
+margin-left: 200px;
+margin-top: -200px;
+opacity: 0.4;
+border: 1px solid #509d93;
+}
+
+
+.Container .Right-side .box-projects:hover {
+transition: all 0.63s ease-in-out;
+transform: scale(1.02);
+cursor: pointer;
+}
+
+
+/*Depois adicionar version mobile, deixando só 1 projeto a baixo da call to action ou acima( vou ver)
+
+E quando clicar nesse um ai abre o slider etc...
+
+
+*/
+
+
+/* Transition Section */
+.Transition-Container {
+  max-width: 1420px;
+  margin: 0 auto;
+  margin-top: -200px;
+  background-color: #000000;
+  color: #c6c7c7;
+  font-size: calc(10px + 2vmin);
+  min-height: 70vh;
+  z-index: 1;
+  
+
+
+}
+
+
+/* Linhas dos itens */
+.row-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1620px;
+  justify-content: space-between;
+  
+}
+
+
+.row-items:after {
+  content: '';
+
+  width: 1px;
+  margin-top: -200px;
+  background-color: #509d93;
+  color: #09dfdf;
+  font-size: calc(10px + 1vmin);
+  min-height: 40vh;
+  z-index: 999;
+margin-top: 0px;
+opacity: 0.4;
+border-radius: 20px;
+
+
+}
+
+
+
+/* Cada box */
+.box {
+  position: relative;
+  background: #509d93;
+  color: #c3c6c8;
+  border-radius: 12px;
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+/* Animação hover */
+.box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Títulos */
+.box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  z-index: 2;
+  color: #ffffff; /* Contraste com o fundo */
+  background: transparent;
+}
+
+/* Descrição */
+.box p {
+  font-size: 1rem;
+  z-index: 2;
+  color: #fff;
+  background: transparent;
+}
+
+/* Estilização moderna com before e after */
+.box::before,
+.box::after {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid #509d93;
+  transform: rotate(45deg);
+  top: -20%;
+  left: -20%;
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 1;
+}
+
+/* Pseudoelemento ativo ao hover */
+.box:hover::before,
+.box:hover::after {
+  transform: rotate(90deg);
+  opacity: 0.3;
+}
+
+/*
+
+.row-items:before {
+  content: '';
+  width: 100px;
+  background-image: url("https://eu-images.contentstack.com/v3/assets/blt07f68461ccd75245/blt09a2ac83e51a0e06/661ce198092eb8747525079e/programming_20evolution.jpg?width=1280&auto=webp&quality=95&format=jpg&disable=upscale");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -200px;
+  padding: 120px;
+  background-color: #509d93;
+  color: #09dfdf;
+  font-size: calc(10px + 1vmin);
+  min-height: 40vh;
+  z-index: 999;
+margin-top: 0px;
+opacity: 0.4;
+border-radius: 20px;
+
+
+}
+*/
+
+
+/* Layout para dispositivos móveis */
+
+
+
+
+/* Services Section */
+
+.Services-Container {
+  max-width: 1420px;
+  margin: 0 auto;
+  margin-top: -200px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: calc(10px + 2vmin);
+  min-height: 70vh;
+  z-index: 1;
+  padding: 20px;
+  
+}
+
+.Services-Container h2 {
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  
+}
+
+.Services-Container h2::before {
+  content: ''; 
+  width: 50px;
+  height: 2px; 
+  background-color: #509d93; 
+  
+  margin-right: 10px;
+}
+
+.Services-Container p {
+  font-size: calc(10px + 1vmin);
+  color: #509d93;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.Services-Container .Services-Box {
+  width: 1420px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+  padding: 30px;
+
+
+}
+
+
+
+.Services-Container .Services-Box div {
+  width: 100%;
+  background-color: #121212;
+  box-shadow: #ffff 0px 3px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 40px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.Services-Container .Services-Box div:hover {
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+
+
+}
+
+
+.Services-Container .Services-Box div h3{
+  font-size: calc(10px + 2vmin);
+}
+
+
+.Services-Container .Services-Box div  i{
+  color: #509d93;
+  font-size: calc(10px + 4vmin);
+}
+
+.Services-Container .Services-Box div  p{
+  text-align: start;
+  color: #c3c6c8;
+  margin-top: 20px;
+  font-size: calc(10px + 0.5vmin);
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+
+
+/* Menu toggle */
+@media screen and (max-width: 577px) {
+ 
+  li {
+    display: none;
+  }
+
+  img {
+    display: none;
+  }
+
+  .Container {
+    flex-direction: column;
+    margin-top: 120px;
+  }
+
+  .Transition-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin-top: -250px;
+    margin-bottom: 250px;
+  }
+
+  .Transition-Container .row-items div {
+    margin-bottom: 20px;
+  }
+
+  .Transition-Container .row-items:after {
+    display: none;
+  }
+
+  .Services-Container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: -200px;
+    margin-bottom: 250px;
+    min-height: 100vh;
+
+  }
+
+  
+  .Services-Container .subtitle {
+      display: none;    
+
+  }
+
+  .Services-Container .Services-Box {
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 20px;
+    margin-top: 20px;
+    
+
+
+  }
+  
+  
+ 
+}
+
+
+
+/* Abacaxi, pimenta verde cortada e batata grelhada cortada */
