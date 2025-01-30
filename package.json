@@ -32,7 +32,7 @@
     "last 1 firefox version",
     "last 1 safari version"
   ],
-  "homepage": "https://GuilhermeOSR.github.io/4usersnew",
+  "homepage": ".",
   "browserslist": {
     "production": [
       ">0.2%",
