@@ -7,17 +7,7 @@ function MainContent() {
   
     <div className="Container">
             
-                <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="BackgroundVideo"
-          playbackRate={0.5}
-        >
-          <source src={'/videos/new2.mp4'} type="video/mp4" />
-          Seu navegador não suporta vídeos HTML5.
-        </video>
+
         <div className="Left-side">
           <p>Disponível para Serviços</p>
           <h2>
